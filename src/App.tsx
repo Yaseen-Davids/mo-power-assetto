@@ -10,6 +10,7 @@ function App() {
 
     return data
       .split("\n")
+      .filter((row) => row != "" && row.includes("|"))
       .map((row) => {
         const [_r, _p] = row.split("|");
         const _pInt = parseInt(_p) + parseInt(power);
